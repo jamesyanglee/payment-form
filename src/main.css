@@ -12005,4 +12005,14 @@ nav {
   content: "*";
   margin-left: 0.25rem;
   color: #dc3545;
+}
+
+footer {
+  background-color: #495057;
+  color: #fff;
+}
+
+footer h5, footer .h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */
