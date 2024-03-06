@@ -1,0 +1,51 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$primary: #e30060;
+$body-bg: #f4f4f4;
+$font-family-sans-serif: 'Roboto', sans-serif;
+$headings-font-weight: 900;
+$small-font-size: 0.775em;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+
+nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.show {
+  color: $primary;
+}
+
+.montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form-control,
+.form-select {
+  background-color: $white;
+}
+
+.form-control::placeholder {
+  color: $border-color;
+}
+
+.btn {
+  font-weight: $font-weight-bolder;
+}
+
+.form-label.required:after {
+  content: '*';
+  margin-left: 0.25rem;
+  color: $danger;
+}
