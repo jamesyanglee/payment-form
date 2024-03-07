@@ -5,12 +5,12 @@
 $primary: #e30060;
 $body-bg: #f4f4f4;
 $font-family-sans-serif: 'Roboto', sans-serif;
-$font-family-montserrat:  'Montserrat', sans-serif;
+$font-family-montserrat: 'Montserrat', sans-serif;
 $headings-font-weight: 900;
 $small-font-size: 0.775em;
+$sub-sup-font-size: 0.675em;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
-
 // Then add additional custom code here
 
 nav {
@@ -24,7 +24,6 @@ nav {
 .navbar-nav .nav-link.show {
   color: $primary;
 }
-
 .montserrat-regular {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
@@ -54,9 +53,26 @@ nav {
 footer {
   background-color: $gray-700;
   color: $white;
+  font-size: $font-size-sm;
 }
 
 footer h5 {
   font-family: $font-family-montserrat;
   font-weight: $font-weight-bold;
+}
+
+@media (max-width: 1024px) {
+  #top-header h2 {
+    font-size: $font-size-lg;
+  }
+
+  #top-header small {
+    font-size: $sub-sup-font-size;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    max-width: 270px;
+  }
 }
