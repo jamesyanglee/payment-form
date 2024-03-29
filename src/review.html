@@ -22,7 +22,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
-  <title>Payment Form</title>
+  <title>Payment Form - Review</title>
 </head>
 <style>
   /* Start Braintree Credit Card Input Styles */
@@ -112,148 +112,56 @@
       action="https://payment.onehourtees.com/payment.php">
       <div class="row mb-5">
         <div class="col">
-          <h1>Payment Form</h1>
-          <p>Please have your order information ready and fill out the payment form below to complete your order. If you
-            have
-            any questions, please email
+          <h1>Review Order</h1>
+          <p>Please review your payment information. There are no cancellations or refunds once payment is made and all
+            sales are final. If you have any questions, please email
             <a href="mailto:info@onehourtees.com">info@onehourtees.com</a> for further
             assistance.
           </p>
         </div>
       </div>
-      <div class="row text">
+      <div class="row mb-5">
         <div class="col">
-          <h6 class="mb-md-3">Payment Information</h6>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <span>Name</span>
+              </div>
+              <span>Peggy Hill</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <span>Sales Agent</span>
+              </div>
+              <span>Ryan (ryan@onehourtees.com)</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <span>Invoice Number</span>
+              </div>
+              <span>OHT12345</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <span>Payment Method</span>
+              </div>
+              <span><google-pay-button environment="TEST" button-color="black"
+                  button-type="plain"></google-pay-button></span>
+              <span><img src="images/apple-pay-mark.svg" width="40"><img src="images/google-pay-mark.svg"
+                  width="40"><img src="images/credit-card-mark.svg" width="170"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <h6 class="my-0">Payment Total (USD)</h6>
+              </div>
+              <span><strong class="text-success">$2,345.67</strong></span>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="yourFirstName">First Name</label></small>
-          <input name="firstName" type="text" class="form-control" id="yourFirstName"
-            placeholder="Enter Your First Name" required>
-        </div>
-
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="yourLastName">Last Name</label></small>
-          <input name="lastName" type="text" class="form-control" id="yourLastName" placeholder="Enter Your Last Name"
-            required>
-        </div>
-
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="yourEmailAddress">Email Address</label></small>
-          <input name="email" type="email" class="form-control" id="yourEmailAddress"
-            placeholder="Enter Your Email Address" required>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="yourSalesAgent">Sales Agent</label></small>
-          <select name="sales_agent" class="form-select" aria-label="Your Sales Agent" required>
-            <option selected disabled>Select Your Sales Agent</option>
-            <option value="17">Karima (karima@onehourtees.com)</option>
-            <option value="39">Elisa (elisa@onehourtees.com)</option>
-            <option value="48">Julio (julio@onehourtees.com)</option>
-            <option value="53">Garret (garret@onehourtees.com)</option>
-            <option value="56">Roman (roman@onehourtees.com)</option>
-            <option value="59">Edwin (edwin@onehourtees.com)</option>
-            <option value="11">Ryan (ryan@onehourtees.com)</option>
-            <option value="23">Pro Wrestling Tees (shipping@prowrestlingtees.com)</option>
-          </select>
-        </div>
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="yourInvoiceNumber">Invoice Number</label></small>
-          <input name="orderId" type="text" class="form-control" id="yourInvoiceNumber"
-            placeholder="Enter Your Invoice Number" required>
-        </div>
-        <div class="col-md-4 mb-5">
-          <small><label class="form-label mb-1 required" for="numin">Invoice Amount</label></small>
-          <div class="input-group">
-            <span class="input-group-text">$</span>
-            <input name="amount" type="text" class="form-control" id="numin" placeholder="00.00" required>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row mb-4">
-        <div class="col">
-          <div class="form-check">
-            <input name="terms" type="checkbox" class="form-check-input" id="termsAndConditions" required>
-            <label class="form-label mb-1 required" for="termsAndConditions">By submitting
-              payment, you
-              acknowledge
-              your have
-              read
-              and agree to our
-              <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms and
-                conditions</a>.</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <hr>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <h6 class="mb-md-3">Express Checkout</h6>
-        </div>
-        <div class="col-auto mb-md-3" id="express">
-
-        </div>
-        <div class="col-auto mb-md-3" id="apple-pay-express">
-          <div class="apple-pay-button" lang=en></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <hr>
-        </div>
-        <div class="col-auto">
-          Or
-        </div>
-        <div class="col">
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h6 class="mb-md-3">Credit Card Information</h6>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="nameOnCard">Name On Card</label></small>
-          <div id="nameOnCard"></div>
-        </div>
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="creditCardNumber">Credit Card Number</label></small>
-          <div id="creditCardNumber"></div>
-        </div>
-        <div class="col-md-4 mb-md-4">
-          <small><label class="form-label mb-1 required" for="expirationDate">Expiration Date (MM/YY)</label></small>
-          <div id="expirationDate"></div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-md-6 mb-md-4">
-          <small><label class="form-label mb-1 required" for="securityCode">Security Code
-              <a class="text-muted" data-bs-toggle="tooltip"
-                data-bs-title="3-digit security code usually found on the back of your card. American Express cards have a 4-digit code located on the front."><i
-                  class="bi bi-question-circle-fill"></i></a></small></label>
-          <div id="securityCode"></div>
-        </div>
-        <div class="col-md-6 mb-5">
-          <small><label class="form-label mb-1 required" for="billingZipCode">Billing Zip Code</label></small>
-          <div id="billingZipCode"></div>
-        </div>
-        <input type="hidden" name="nonce" id="nonce" />
-        <input type="hidden" name="deviceData" id="deviceData" />
-        <input type="hidden" name="method" id="method" />
-
       </div>
       <div class="row text-end">
         <div class="col">
-          <button type="submit" class="btn btn-primary" id="payBtn">Continue</button>
+          <button type="submit" class="btn btn-primary" id="payBtn">Submit Payment</button>
         </div>
       </div>
     </form>
