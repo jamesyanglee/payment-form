@@ -2,13 +2,14 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won't be available)
-$primary: #e30060;
+$primary: #000000;
 $body-bg: #f4f4f4;
 $font-family-sans-serif: 'Roboto', sans-serif;
 $font-family-montserrat: 'Montserrat', sans-serif;
 $headings-font-weight: 900;
 $small-font-size: 0.775em;
 $sub-sup-font-size: 0.675em;
+$link-hover-color: #ff0000;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 // Then add additional custom code here
@@ -42,6 +43,11 @@ nav {
 
 .btn {
   font-weight: $font-weight-bolder;
+}
+
+.btn-primary {
+  --bs-btn-hover-bg: #ff0000;
+  --bs-btn-hover-border-color: #ff0000;
 }
 
 .form-label.required:after {
